@@ -1483,11 +1483,11 @@ Usage: wpscan [quick|full]\n\t\t\n
   elif [[ $1 == "full" ]] ; then
     echo -e "\n\n\tStarting full scan...\n"
     if [[ $quiet == 'o' ]] ; then
-      LC_ALL=C fgrep -F -ilr$quiet "$scan_strings" ./
+      LC_ALL=C fgrep -F -ilr$quiet "$scan_strings" $(pwd)
     else
-      LC_ALL=C fgrep -F -ir$quiet --color=always "$scan_strings" ./  | cut -c1-200
+      LC_ALL=C fgrep -F -ir$quiet --color=always "$scan_strings" $(pwd) | cut -c1-200
     fi
-    #LC_ALL=C grep -a -F -n -r -f ./search-strings.txt ./ | cut -c1-200
+    #LC_ALL=C grep -a -F -n -r -f ./search-strings.txt $(pwd) | cut -c1-200
   
   elif [[ $1 == "pics" ]] ; then
     echo -e "\n\n\tStarting picture scan...\n"
