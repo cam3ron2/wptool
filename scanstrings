@@ -277,4 +277,4 @@ magmi_exploit
 9091968376
 stripslashes\(base64_decode\(base64_decode
 \"64_decode
-
+explode(chr((300-256))
