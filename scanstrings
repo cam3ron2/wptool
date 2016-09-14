@@ -279,3 +279,4 @@ stripslashes(base64_decode(base64_decode
 explode(chr((300-256))
 @base64_encode($_GET['id'])
 (@isset($_REQUEST[_
+"riny(".$strings2("base64_decode
