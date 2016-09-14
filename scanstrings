@@ -277,3 +277,5 @@ magmi_exploit
 stripslashes(base64_decode(base64_decode
 "64_decode
 explode(chr((300-256))
+@base64_encode($_GET['id'])
+(@isset($_REQUEST[_
