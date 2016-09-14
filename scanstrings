@@ -205,7 +205,7 @@ if(isset($_GET["ickey"])){echo"<font color=#FFFFFF>[uname]".php_uname()
 eval(base64_decode("ICAgIGVycm9yX3JlcG9ydGluZygwKTsgICRscnUgPSAiZ2cvNDcwNTYxN
 return $str ? '=?utf-8?B?'.base64_encode($str).'?=' : null
 ##-### merging with L3 definitions ###--###
-'\@\$GLOBALS.*continue
+'@$GLOBALS.*continue
 GLOBALS.*x61
 FbU73jxn
 edE0lF
@@ -219,15 +219,15 @@ eval.*q272748
 GET.*ineedthispage
 x77.x69.x76
 rWmyiJg3T
-hacked\ by
+hacked by
 eNqdWPtv
 vd56b6998
 filesman
 Googleman
-YYKJKaSZ.*\$_POST.*ppeRDsIfDuUi
+YYKJKaSZ.*$_POST.*ppeRDsIfDuUi
 5ebfbb39
 c99shell
-bar\/index
+bar/index
 client.*x05.x01
 POST.*do.*brut
 img.*empty.*referrer
@@ -235,7 +235,7 @@ AtOPvMzpDq
 5UpbRhpW
 Qb08tTv2
 ko0l
-eval.stripslashes.array_pop\(\$_POST
+eval.stripslashes.array_pop($_POST
 www.*_POST.*yt.*ad.e
 QGluaV9
 doctoregpg
@@ -258,23 +258,23 @@ x7f.x45.x4c
 ZXZhbChzd
 snatveyz
 x65.x76.x61
-\@\$_COOKIE.*\$_COOKIE.*\$_COOKIE.*\$_COOKIE
+@$_COOKIE.*$_COOKIE.*$_COOKIE.*$_COOKIE
 testa.*veio
 ezenmedia
 19ca14e7ea63
-php\ \ \ \ \ \ \ \ .*\$
+php        .*$
 shakeboomb
 js.jquery.min.php
-chr.*chr.*chr.*\..*\..*eval
+chr.*chr.*chr.*..*..*eval
 error.*hexToStr.*strlen.*hexdec
 GLOBALS.*Array.base64_decode.*function
-rot13\(.riny
-\*\/extract\(\$_COOKIE
+rot13(.riny
+*/extract($_COOKIE
 5pJQhrPh
 x33JlcG
 7a3cb9bdfa
 magmi_exploit
 9091968376
-stripslashes\(base64_decode\(base64_decode
-\"64_decode
+stripslashes(base64_decode(base64_decode
+"64_decode
 explode(chr((300-256))
