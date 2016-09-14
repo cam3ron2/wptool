@@ -204,7 +204,6 @@ str_replace("YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY
 if(isset($_GET["ickey"])){echo"<font color=#FFFFFF>[uname]".php_uname()
 eval(base64_decode("ICAgIGVycm9yX3JlcG9ydGluZygwKTsgICRscnUgPSAiZ2cvNDcwNTYxN
 return $str ? '=?utf-8?B?'.base64_encode($str).'?=' : null
-##-### merging with L3 definitions ###--###
 '@$GLOBALS.*continue
 GLOBALS.*x61
 FbU73jxn
