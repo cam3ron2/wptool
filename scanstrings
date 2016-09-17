@@ -280,3 +280,4 @@ explode(chr((300-256))
 @base64_encode($_GET['id'])
 (@isset($_REQUEST[_
 "riny(".$strings2("base64_decode
+$GLOBALS;${"\\x47\\x4c
