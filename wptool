@@ -37,7 +37,7 @@ specified version.
 \t    #.#.#\n\t\tDownload and install/replace a specific version of 
 \t\tthe Wordpress core, in the form of #.#.#
 \t    ca\n\t\tDownload and replace core files for all installations
-\t    na\n\t\tUpdate all insatllations to the current version
+\t    ua\n\t\tUpdate all insatllations to the current version
 "
     return
   elif [[ $1 == "cur" ]]; then file=wordpress-$(wpver -q | tail -n 1 | awk '{print $1}')
@@ -48,6 +48,9 @@ specified version.
   fi
 
   if [[ "$1" == "ca" ]]; then for i in $(find $(pwd) -iname 'wp-config.php' | sed 's/wp-config.php//g'); do ver=`cd $i && wpver |grep 'WP version' | grep -Eo '[0-9]+\.[0-9]+(\.[0-9]{1,2})?' | uniq ` ; echo $i; echo $ver; wpcore $ver; done
+  fi
+
+  if [[ "$1" == "ua" ]]; then for i in $(find $(pwd) -iname 'wp-config.php' | sed 's/wp-config.php//g'); do wpcore new; done
   fi
 
   if [[ "$file" == "wordpress-Unknown" ]]; then
