@@ -726,11 +726,11 @@ This tool returns the current install's file and database versions.
 
 \t    -q\n\t\tdisplay abbreviated version output
 \t    -h\n\t\tdisplay this help output
-\t    all\n\t\tprint the path and version for all wordpress installations
+\t    -a\n\t\tprint the path and version for all wordpress installations
 "
     return
   fi
-  if [[ "$1" == "all" ]]; then for i in $(find $(pwd) -iname 'wp-config.php' | sed 's/wp-config.php//g'); do ver=`cd $i && wpver -q | awk '{print $1}'`; echo "$i -- WP Version: $ver"; done
+  if [[ "$1" == "-a" ]]; then for i in $(find $(pwd) -iname 'wp-config.php' | sed 's/wp-config.php//g'); do ver=`cd $i && wpver -q | awk '{print $1}'`; echo "$i -- WP Version: $ver"; done
   fi
   local filever="Unknown"
   local dbver="Unknown"
