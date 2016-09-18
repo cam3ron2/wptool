@@ -741,6 +741,8 @@ This tool returns the current install's file and database versions.
   if [[ "$1" == "-q" ]]; then echo -e "$filever $dbver $dbver_files"
   else echo -e "\n\tWP version:\t$filever\n\tDB version:\t$dbver (up to $dbver_files)\n"
   fi
+  if [[ "$1" == "-A" ]]; then for i in $(find $(pwd) -iname 'wp-config.php' | sed 's/wp-config.php//g'); do ver=`cd $i && wpver`; echo $i; echo $ver; done
+  fi
 }
 
 # Shows the main logs
