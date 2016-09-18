@@ -726,6 +726,7 @@ This tool returns the current install's file and database versions.
 
 \t    -q\n\t\tdisplay abbreviated version output
 \t    -h\n\t\tdisplay this help output
+\t    all\n\t\tprint the path and version for all wordpress installations
 "
     return
   fi
