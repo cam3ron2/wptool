@@ -281,3 +281,5 @@ explode(chr((300-256))
 (@isset($_REQUEST[_
 "riny(".$strings2("base64_decode
 $GLOBALS;${"\\x47\\x4c
+$O00OO0=urldecode(
+eval(gzinflate(str_rot13(base64_decode(
