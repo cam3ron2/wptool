@@ -283,3 +283,5 @@ explode(chr((300-256))
 $GLOBALS;${"\\x47\\x4c
 $O00OO0=urldecode(
 eval(gzinflate(str_rot13(base64_decode(
+@assert(str_rot13('riny
+($a, $b){$c=$GLOBALS
