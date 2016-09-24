@@ -1506,7 +1506,7 @@ Usage: wpscan [quick|full]\n\t\t\n
     if [[ $quiet == 'o' ]] ; then
       LC_ALL=C fgrep -F -ilr$quiet "$scan_strings" $(pwd)
     else
-      LC_ALL=C fgrep -F -ir$quiet --color=always "$scan_strings" $(pwd) | cut -c1-200 | sed 's/:/ /g' | awk '{print $1}' | sort | uniq
+      LC_ALL=C fgrep -F -ilr$quiet "$scan_strings" $(pwd) | cut -c1-200 | sort | uniq
     fi
     #LC_ALL=C grep -a -F -n -r -f ./search-strings.txt $(pwd) | cut -c1-200 | sed 's/:/ /g' | awk '{print $1}' | sort | uniq
 
