@@ -47,7 +47,7 @@ specified version.
   else file="latest"
   fi
 
-  if [[ "$1" == "ca" ]]; then for i in $(find $(pwd) -iname 'wp-config.php' | sed 's/wp-config.php//g'); do ver=`cd $i && wpver |grep 'WP version' | grep -Eo '[0-9]+\.[0-9]+(\.[0-9]{1,2})?' | uniq ` ; echo $i; echo $ver; wpcore $ver; done
+  if [[ "$1" == "ca" ]]; then for i in $(find $(pwd) -iname 'wp-config.php' | sed 's/wp-config.php//g'); do ver=`cd $i && wpver |grep 'WP version' | grep -Eo '[0-9]+\.[0-9]+(\.[0-9]{1,2})?' | uniq ` ; echo $i; echo $ver; cd $i && wpcore $ver; done
   fi
 
   if [[ "$1" == "ua" ]]; then for i in $(find $(pwd) -iname 'wp-config.php' | sed 's/wp-config.php//g'); do wpcore new; done
