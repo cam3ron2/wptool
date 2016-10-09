@@ -442,7 +442,7 @@ function wpdb() {
     echo -e "\t-i FILE\n\t\texport current database to file FILE.\n\t\tThe specified FILE must end in .sql\n"
     echo -e "\t-e [FILE]\n\t\texport current database to optional file FILE.\n\t\tIf a FILE is specified, it must end in .sql\n"
     echo -e "\t-s\n\t\tshow the size of all tables and the database\n"
-    echo -e "\t-oa\n\t\trepair and optimize all wordpress databases\n
+    echo -e "\t-oa\n\t\trepair and optimize all wordpress databases\n"
     return
   elif [[ ! -f wp-config.php ]]; then echo Could not find wp-config.php! && return 9
   fi
