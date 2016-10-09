@@ -434,7 +434,6 @@ function wpconn() {
 }
 
 function wpdb() {
-  #Need to include a optimize/fix option
   if [[ $1 == "--help" || $1 == "-h" ]]; then
     echo -e "\nThis tool tests the database connectivity based on settings in the wp-config.php file, and can import/export a database based on its settings.\n"
     echo -e "Usage:\n"
@@ -449,6 +448,10 @@ function wpdb() {
   
   if [[ $1 == '-oa' ]] ; then
   for i in $(find $(pwd) -iname 'wp-config.php' | sed 's/wp-config.php//g'); do echo $i; cd $i; u=$(wpdb | grep -i user | awk '{print $3}'); p=$(wpdb | grep -i pass | awk '{print $3}'); d=$(wpdb | grep -i name | awk '{print $3}'); mysqlcheck -p$p -u $u $d -r; mysqlcheck -p$p -u $u $d -o; done
+  fi 
+  
+  if [[ $1 == '-o' ]] ; then
+  u=$(wpdb | grep -i user | awk '{print $3}'); p=$(wpdb | grep -i pass | awk '{print $3}'); d=$(wpdb | grep -i name | awk '{print $3}'); mysqlcheck -p$p -u $u $d -r; mysqlcheck -p$p -u $u $d -o;
   fi 
   
   if [[ $1 == '-s' ]] ; then
