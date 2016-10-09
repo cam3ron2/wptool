@@ -442,8 +442,13 @@ function wpdb() {
     echo -e "\t-e [FILE]\n\t\texport current database to optional file FILE.\n\t\tIf a FILE is specified, it must end in .sql\n"
     echo -e "\t-s\n\t\tshow the size of all tables and the database\n"
     echo -e "\t-oa\n\t\trepair and optimize all wordpress databases\n"
+    echo -e "\t-t\n\tcheck the number of transients in the _options table"
     return
   elif [[ ! -f wp-config.php ]]; then echo Could not find wp-config.php! && return 9
+  fi
+  
+  if [[ $1 == '-t' ]] ; then
+  echo -e "\tTransient Count: $(u=$(wpdb | grep -i user | awk '{print $3}'); p=$(wpdb | grep -i pass | awk '{print $3}'); d=$(wpdb | grep -i name | awk '{print $3}'); pfx=$(wpdb | grep -i prefix | awk '{print $3}'); t="options"; mysql -p$p -u $u $d -e "SELECT COUNT(*) FROM $pfx$t WHERE option_name LIKE ('_transient_%')" | grep -Eo '[0-9]+')"
   fi
   
   if [[ $1 == '-oa' ]] ; then
